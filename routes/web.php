@@ -20,10 +20,8 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/expenses', [ExpenseController::class, 'index'])
-	->middleware(['auth']);
 Route::get('/profile', [UserProfileController::class, 'index'])
     ->middleware(['auth']);
-
+Route::resource('expenses', ExpenseController::class);
 
 require __DIR__.'/auth.php';
