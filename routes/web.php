@@ -19,6 +19,5 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::resource('expenses', ExpenseController::class);
 
 require __DIR__.'/auth.php';
