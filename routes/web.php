@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExpenseController;
+use App\Http\Controllers\UserProfileController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,7 +19,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
 Route::get('/expenses', [ExpenseController::class, 'index'])
 	->middleware(['auth']);
+Route::get('/profile', [UserProfileController::class, 'index'])
+    ->middleware(['auth']);
+
 
 require __DIR__.'/auth.php';
