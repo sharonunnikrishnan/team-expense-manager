@@ -1,1 +1,1 @@
-APP_NAME=ExpenseModuleSample
+APP_NAME=LoginModule
