@@ -1,1 +1,1 @@
-This is an expense management file
+APP_NAME=MyApplication
